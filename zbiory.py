@@ -49,6 +49,11 @@ if len(krzyki.intersection(centrum)) != 0:
 #kazdy: chory, zdrowy, z krzykow i z centrum, powinien być w bazie nfz
 #jesli nie ma trzeba dopisać
 
+pozaNFZ = chorzy_rok.union(chorzy_miesiac.union(krzyki.union(centrum)))
+
+
+ if len(pozaNFZ) != 0:
+     print(pozaNFZ)
 
 
 #lista = [1, 2, 3, 4, 4, 4, 5, 5, 6]
