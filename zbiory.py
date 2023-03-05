@@ -35,16 +35,21 @@ else:
 
 if len(krzyki.intersection(centrum)) != 0:
     x = input('usunac z centrum (C), czy z krzykow (K)')
-    if x.lower() == "k":
-        duplikaty = krzyki.intersection(centrum)
+    duplikaty = krzyki.intersection(centrum)
+    if x.lower() == 'k':
         krzyki = krzyki.difference(duplikaty)
-    elif x.lower() =="c":
+    elif x.lower() == 'c':
         for pesel in duplikaty:
-            centrum.remove(i)
+            centrum.remove(pesel)
 
     else:
         print('zly wybor')
         print('sprzawdzamduplikaty:', krzyki.intersection((centrum)))
+
+#kazdy: chory, zdrowy, z krzykow i z centrum, powinien być w bazie nfz
+#jesli nie ma trzeba dopisać
+
+
 
 #lista = [1, 2, 3, 4, 4, 4, 5, 5, 6]
 #lista = list(set(lista))
