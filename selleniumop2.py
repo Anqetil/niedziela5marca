@@ -13,5 +13,10 @@ page.enter_password('secret_sauce')
 time.sleep(0.5)
 page.click_login()
 time.sleep(0.5)
+
+assert driver.current_url == 'https://www.saucedemo.com/inventory.html'
+
+
 make_screenshot(driver)
+page.the_snapshot()
 driver.quit()
